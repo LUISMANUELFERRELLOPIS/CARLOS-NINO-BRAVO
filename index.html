@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- LeaFleet trazando rutas -->
+    <!-- popup de coordenadas -->
+    <!-- https://gist.github.com/sigdeletras/be693cb24f6eaed6a30911183b233085 -->
+    <!-- Plugins LeaFleet
+    https://leafletjs.com/plugins.html#routing -->
+    <!-- PHP MYSQl KML
+    https://developers.google.com/kml/articles/phpmysqlkml -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+     crossorigin=""></script>
+    <script defer src="index.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Creación de recorridos a pie como KML</h1>
+        <div id="buscador">
+            <label for="ciudad">Elija Ciudad:</label>
+            <select id="ciudad"></select>
+        </div>
+    </header>
+    <article>
+        <div id="contenedor_mapa"></div>
+        <div id="ruta">
+            <input id="dibujo" type="button" value="Dibujar Recorrido">
+            <input id="graba" type="button" value="Guardar Recorrido" disabled>
+            <!-- Aqui se va armando la ruta -->
+            <div id="contenedor" class="contenedor">
+                <div class="elemento">Nombre</div>
+                <div class="elemento">longitud</div>
+                <div class="elemento">latitud</div>
+                <div class="elemento">Eliminar</div>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>
